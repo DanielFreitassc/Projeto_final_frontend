@@ -1,10 +1,10 @@
-import Footer from "../components/Footer";
+import { ContainerHome } from "./styles";
 
 const Home = () => {
     return(
-        <div>
+        <ContainerHome>
         
-        </div>
+        </ContainerHome>
     );
 }
 export default Home;

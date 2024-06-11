@@ -1,9 +1,10 @@
-import { ContainerHeader } from "./styles";
+import { ContainerHeader, HomeNavigate, LinkHeader } from "./styles";
+import { IoHomeOutline } from "react-icons/io5";
 
 const Header = () => {
     return(
         <ContainerHeader>
-            <div></div>
+            <HomeNavigate> <LinkHeader to={"/"}><IoHomeOutline/> Home</LinkHeader> </HomeNavigate>
         </ContainerHeader>
     )
 }
