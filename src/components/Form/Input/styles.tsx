@@ -13,8 +13,8 @@ export const StyledInput = styled.input`
 `;
 
 export const StyledLabel = styled.label`
-  font-weight: 600;
-  color: white;
+  font-weight: 200;
+  color: black;
   font-size: 1.3vw;
 `;
 

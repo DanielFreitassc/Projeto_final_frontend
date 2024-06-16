@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import { Login } from "./screens/Login";
 import { AuthProvider } from "./context/AuthProvider";
 import { AutorizacaoProvider } from "./context";
+import { User } from "./screens/User";
 
 export const AppRoutes = createBrowserRouter([
   {
@@ -27,4 +28,15 @@ export const AppRoutes = createBrowserRouter([
       </AuthProvider>
     )
   },
+  {
+    path:"/users",
+    element:(
+        <AutorizacaoProvider>
+          <Header/>
+          <User/>
+          <Footer/>
+        </AutorizacaoProvider>
+     
+    )
+  }
 ]);

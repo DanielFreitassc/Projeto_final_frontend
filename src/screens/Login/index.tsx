@@ -42,7 +42,7 @@ export const Login = () => {
                     <InputForm
                         type="email"
                         name="username"
-                        label="Usuário"
+                        label="Email"
                         placeholder="Digite seu usuário"
                         onChange={handleloginChange}
                     />
