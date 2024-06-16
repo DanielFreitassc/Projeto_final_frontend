@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const privateAPi = axios.create({
-    baseURL: "https://projetofinalfrontend.onrender.com",
+    baseURL: "http://localhost:8080",
 });
 
 privateAPi.interceptors.request.use((config) => {

@@ -1,21 +1,21 @@
 import { useNavigate } from "react-router-dom";
-import { ContainerTable, Table, TableBody, TableColumnBody, TableColumnHead, TableHead, TableRow } from "./styles";
+import { ContainerTable, Table, TableBody, TableColumnBody, TableColumnHead, TableHead, TableRow, TableRowHead } from "./styles";
 import { ITableBody, ITableHeader } from "./types";
 
 export const TableList = ({ colsHeader, children }: ITableHeader) => (
     <ContainerTable>
         <Table>
             <TableHead>
-                <TableRow>
-                    {colsHeader.map((col) => (
-                        <TableColumnHead key={col.label}>
+                <TableRowHead>
+                    {colsHeader.map((col, index) => (
+                        <TableColumnHead key={index}>
                             {col.label}
                         </TableColumnHead>
                     ))}
-                </TableRow>
+                </TableRowHead>
             </TableHead>
-        </Table>
         <TableBody>{children}</TableBody>
+        </Table>
     </ContainerTable>
 );
 
@@ -33,6 +33,7 @@ export const TableContent = ({ colsBody, linkTo }: ITableBody) => {
                 key={col.cell + i}
                 $cssProps={col.cssProps}
             >
+                {col.cell}
             </TableColumnBody>
         ))}
        </TableRow>

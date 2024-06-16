@@ -1,11 +1,10 @@
 import { FooterContainer, CopyContainer, Copy } from "./styles";
 
 const Footer = () => {
-    const currentYear = new Date().getFullYear()
     return(
         <FooterContainer>
             <CopyContainer>
-                <Copy>SATC©{currentYear}</Copy>
+                <Copy>SATC©2024</Copy>
             </CopyContainer>
         </FooterContainer>
     )
