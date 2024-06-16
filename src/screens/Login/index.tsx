@@ -1,16 +1,14 @@
 
 import { Navigate } from 'react-router-dom';
 import { InputForm } from '../../components/Form/Input';
-import { ContainerLogin, FormContainer, FormContent } from './style';
+import { ButtonLogin, ContainerImage, ContainerLogin, FormContainer, FormContent, ImageContent, TitleLogin } from './style';
 import { useState } from 'react';
 import { useAuth } from '../../context/AuthProvider/useAuth';
-
 export const Login = () => {
     const [login, setLogin] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
     const auth = useAuth();
-
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
     
@@ -36,7 +34,11 @@ export const Login = () => {
     return (
         <ContainerLogin>
             <FormContainer>
+                <ContainerImage>
+                <ImageContent src="./images/login.png" alt="" />
+                </ContainerImage>
                 <FormContent onSubmit={handleSubmit}>
+                    <TitleLogin>Bem vindo de volta</TitleLogin>
                     <InputForm
                         type="email"
                         name="username"
@@ -51,7 +53,7 @@ export const Login = () => {
                         placeholder="Digite sua senha"
                         onChange={handlePasswordChange}
                     />
-                    <button type="submit">Login</button>
+                    <ButtonLogin type="submit">Login</ButtonLogin>
                 </FormContent>
             </FormContainer>
         </ContainerLogin>
