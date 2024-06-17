@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const ContainerUsersList = styled.div`
-
-`
-export const ContentTable = styled.div`
-
+    width: 100%;
+    height: 100vh;
 `

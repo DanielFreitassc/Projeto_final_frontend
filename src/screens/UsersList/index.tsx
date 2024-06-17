@@ -20,8 +20,7 @@ export const UsersList = () => {
     }, []);
     
     return (
-        <ContainerUsersList>
-            <ContentTable>
+        <ContainerUsersList>  
                 {users.length === 0 ? (
                     <p>Nenhum usuário cadastrado.</p>
                 ) : (
@@ -49,7 +48,6 @@ export const UsersList = () => {
                         ))}
                     </TableList>
                 )}
-            </ContentTable>
         </ContainerUsersList>
     );
 };
