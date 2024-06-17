@@ -1,5 +1,5 @@
 import { TableContent, TableList } from "../../components/Table";
-import { ContainerUsersList, ContentTable } from "./styles";
+import { ContainerUsersList } from "./styles";
 import { privateAPi } from "../../services/privateApi";
 import { useEffect, useState } from "react";
 
