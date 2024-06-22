@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Header from ".";
 import { Link } from "react-router-dom";
 
 export const ContainerHeader = styled.div`
@@ -21,6 +20,7 @@ export const HomeNavigate = styled.nav`
     gap: 10px;
     text-decoration: none;
     color: inherit;
+    padding: 3rem;
 `
 export const LinkHeader = styled(Link)`
     text-decoration: none;

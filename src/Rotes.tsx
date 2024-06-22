@@ -10,7 +10,7 @@ import { UsersList } from "./screens/UsersList";
 
 export const AppRoutes = createBrowserRouter([
   {
-    path: "/",
+    path: "/home",
     element: (
       <div>
       <AutorizacaoProvider>
@@ -22,7 +22,7 @@ export const AppRoutes = createBrowserRouter([
     )
   },
   {
-    path:"/login",
+    path:"/",
     element: (
       <AuthProvider>
         <Login/>
