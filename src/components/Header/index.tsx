@@ -6,8 +6,7 @@ const Header = () => {
         <ContainerHeader>
             <HomeNavigate> <LinkHeader to={"/home"}><IoHomeOutline/> Home</LinkHeader> </HomeNavigate>
             <HomeNavigate> <LinkHeader to={"/users"}>Cadaastro de pessoas</LinkHeader> </HomeNavigate>
-            <HomeNavigate> <LinkHeader to={"#"}> Cadastro de produtos</LinkHeader> </HomeNavigate>
-            <HomeNavigate> <LinkHeader to={"#"}> Listagem de produtos</LinkHeader> </HomeNavigate>
+            <HomeNavigate> <LinkHeader to={"#"}>Produtos</LinkHeader> </HomeNavigate>
         </ContainerHeader>
     )
 }
