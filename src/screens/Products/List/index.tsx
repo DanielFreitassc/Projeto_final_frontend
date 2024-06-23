@@ -7,6 +7,8 @@ import { IProduct } from './types'
 import { ModalCreateProduct } from './utils/ModalCreateProduct'
 import { ModalEditProduct } from './utils/ModalEditProduct'
 import { privateAPi } from '../../../services/privateApi'
+import { catchHandler } from '../../../utils/functions'
+import { toast } from 'react-toastify'
 
 export const ProductsList = () => {
     //Modals 
@@ -19,9 +21,9 @@ export const ProductsList = () => {
 
     const handleDeleteProduct = async(id: number) => {
         await privateAPi.delete(`/products/${id}`).then(() => {
-            alert('Apagado com sucesso')
+            toast.success('Apagado com sucesso')
             refetch()
-        }).catch(() => alert("Erro"))
+        }).catch((err: any) => catchHandler(err))
     }
 
   return (

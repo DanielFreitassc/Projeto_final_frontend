@@ -6,6 +6,7 @@ import { InputForm } from "../../../../../components/Form/Input"
 import { Button } from "../../styles"
 import { ButtonContainer } from "./styles"
 import { privateAPi } from "../../../../../services/privateApi"
+import { catchHandler } from "../../../../../utils/functions"
 
 interface IModalProps {
     setModal: React.Dispatch<React.SetStateAction<boolean>>
@@ -53,7 +54,7 @@ export const ModalCreateProduct = ({onSave,setModal }: IModalProps) => {
         }).then(() => {
             onSave()
             setModal(false)
-        }).catch(() => alert("Erro"))
+        }).catch((err) => catchHandler(err))
     }
 
   return (

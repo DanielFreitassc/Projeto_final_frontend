@@ -7,6 +7,7 @@ import { Button } from "../../styles"
 import { IProduct } from "../../types"
 import { ButtonContainer } from "./styles"
 import { privateAPi } from "../../../../../services/privateApi"
+import { catchHandler } from "../../../../../utils/functions"
 
 
 interface IModalProps {
@@ -56,7 +57,7 @@ export const ModalEditProduct = ({onSave,setModal, product }: IModalProps) => {
         }).then(() => {
             onSave()
             setModal(false)
-        }).catch(() => alert("Erro"))
+        }).catch((err) => catchHandler(err))
     }
 
   return (
