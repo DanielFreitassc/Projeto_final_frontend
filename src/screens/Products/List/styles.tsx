@@ -1,9 +1,20 @@
 import styled from "styled-components";
 
-export const ContainerUsersList = styled.div`
+export const Container = styled.div`
     width: 100%;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 `
+
+export const Header = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+`
+
 export const Button = styled.button<{$bgColor?: string, $width?: string}>`
     width:  ${({$width}) => $width || '300px' };
     border: none;
@@ -24,9 +35,14 @@ export const Button = styled.button<{$bgColor?: string, $width?: string}>`
     }
 `
 
-export const PessoaButtons = styled.div`
-    display: flex;
-    justify-content: space-between;
+export const TableContainer = styled.div`
+    margin-top: 20px;
     width: 80%;
-    margin: 1rem;
+`
+
+export const ActionContainer = styled.div`
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
 `

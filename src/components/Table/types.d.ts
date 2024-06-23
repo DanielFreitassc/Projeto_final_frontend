@@ -12,5 +12,5 @@ export interface ITableBody {
         cell: any;
         cssProps?: CSSProperties;
     }[];
-    linkTo: string;
+    linkTo?: string;
 }

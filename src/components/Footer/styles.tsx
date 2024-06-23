@@ -6,6 +6,7 @@ export const FooterContainer = styled.div`
     height: 130px;
     width: 100%;
     padding: 8px;
+    margin-top: auto;
 `
 export const CopyContainer = styled.div`
     display: flex;

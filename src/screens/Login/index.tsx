@@ -29,7 +29,7 @@ export const Login = () => {
       };
       
       if (isAuthenticated) {
-        return <Navigate to="/" replace={true} />;
+        return <Navigate to="/users-list" replace={true} />;
       }
     return (
         <ContainerLogin>

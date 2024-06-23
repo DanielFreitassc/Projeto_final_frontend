@@ -3,6 +3,7 @@ import { InputForm } from "../../components/Form/Input";
 import { SelectForm } from "../../components/Form/Select";
 import { ButtonRegister, ContainerUser, FormUser, TitleUser } from "./styles";
 import { privateAPi } from '../../services/privateApi';
+import { useNavigate } from 'react-router-dom';
 
 interface RegisterData {
     name: string;
@@ -23,6 +24,7 @@ export const registerUser = async (userData: RegisterData) => {
 };
 
 export const User: React.FC = () => {
+    const navigate = useNavigate();
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [passwordsMatch, setPasswordsMatch] = useState(true);
@@ -78,6 +80,7 @@ export const User: React.FC = () => {
         try {
             const response = await registerUser(userData);
             console.log('User registered successfully:', response);
+            navigate('/users-list');
         } catch (error) {
             console.error('Error registering user:', error);
         }

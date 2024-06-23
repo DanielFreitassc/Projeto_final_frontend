@@ -14,7 +14,7 @@ export const TableList = ({ colsHeader, children }: ITableHeader) => (
                     ))}
                 </TableRowHead>
             </TableHead>
-        <TableBody>{children}</TableBody>
+            <TableBody>{children}</TableBody>
         </Table>
     </ContainerTable>
 );

@@ -1,7 +1,8 @@
 import { TableContent, TableList } from "../../components/Table";
-import { ContainerUsersList } from "./styles";
+import { Button, ContainerUsersList, PessoaButtons } from "./styles";
 import { privateAPi } from "../../services/privateApi";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const UsersList = () => {
     const [users, setUsers] = useState([]);
@@ -20,7 +21,16 @@ export const UsersList = () => {
     }, []);
     
     return (
-        <ContainerUsersList>  
+        
+        <ContainerUsersList>
+                <PessoaButtons>
+                <h2>Usuario</h2>
+                <Link to={"/users"}>
+                
+                <Button>Cadastrar</Button>
+                </Link>
+                </PessoaButtons>
+
                 {users.length === 0 ? (
                     <p>Nenhum usuário cadastrado.</p>
                 ) : (

@@ -7,7 +7,7 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         box-sizing: border-box;
     }
-
+    
     body {
         font-family: "Poppins", sans-serif;
         font-weight: 400;
