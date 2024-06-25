@@ -14,7 +14,7 @@ export const ProductsList = () => {
   const [modalCreateProduct, setModalCreateProduct] = useState(false);
   const [modalEditProduct, setModalEditProduct] = useState(false);
   const { data, loading, refetch } = useFetch<IProduct[]>({
-    api: "https://projetofinalfrontend.onrender.com/products",
+    api: "/products",
   });
 
   const [selectedProduct, setSelectedProduct] = useState<IProduct>();

@@ -7,6 +7,7 @@ export const Container = styled.div`
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  height: 70vh;
 `;
 
 export const Header = styled.div`

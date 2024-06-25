@@ -2,7 +2,7 @@ import axios from "axios";
 import { getUserLocalStorage } from "../context/AuthProvider/util";
 
 export const privateAPi = axios.create({
-    baseURL: "https://projetofinalfrontend.onrender.com",
+    baseURL: "http://localhost:8080",
     headers: {
         "Content-Type": "application/json",
       },
