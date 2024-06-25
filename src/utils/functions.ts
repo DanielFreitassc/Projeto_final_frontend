@@ -10,8 +10,8 @@ export const catchHandler = (err: ICatcherhandler) => {
             toast.error(`Erro: ${err.response.status}`);
         }
 
-        if (err.response.status == 401 && window.location.pathname !== "/login")
-            window.location.pathname = "/login";
+        if (err.response.status == 401 && window.location.pathname !== "/")
+            window.location.pathname = "/";
     } else {
         toast.error("Erro de comunicação");
     }

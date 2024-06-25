@@ -13,4 +13,9 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 400;
         font-style: normal;
     }
+
+    .container{
+        min-height: 100vh;
+    }
+
 `

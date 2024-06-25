@@ -9,49 +9,44 @@ import { UsersList } from "./screens/UsersList";
 import { ProductsList } from "./screens/Products/List";
 
 export const AppRoutes = createBrowserRouter([
-  
   {
-    path:"/",
+    path: "/",
     element: (
       <AuthProvider>
-        <Login/>
+        <Login />
       </AuthProvider>
-    )
+    ),
   },
   {
-    path:"/users",
-    element:(
-        <AutorizacaoProvider>
-          <Header/>
-          <User/>
-          <Footer/>
-        </AutorizacaoProvider>
-     
-    )
+    path: "/users",
+    element: (
+      <AutorizacaoProvider>
+        <Header />
+        <User />
+        <Footer />
+      </AutorizacaoProvider>
+    ),
   },
   {
-    path:"/users-list",
-    element:(
-      <>
-
-        <Header/>
-        <UsersList/>
-        <Footer/>
-      </>
-      
-    )
-  },
-  {
-    path:'/products',
+    path: "/users-list",
     element: (
       <>
-       <AutorizacaoProvider>
-
-        <Header/>
-          <ProductsList />
-        <Footer/>
-       </AutorizacaoProvider>
+        <Header />
+        <UsersList />
+        <Footer />
       </>
-    )
-  }
+    ),
+  },
+  {
+    path: "/products",
+    element: (
+      <>
+        <AutorizacaoProvider>
+          <Header />
+          <ProductsList />
+          <Footer />
+        </AutorizacaoProvider>
+      </>
+    ),
+  },
 ]);

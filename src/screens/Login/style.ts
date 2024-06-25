@@ -45,4 +45,9 @@ export const ButtonLogin = styled.button`
     border: none;
     background-color: blue;
     color: white;
+
+    &:hover{
+        cursor: pointer;
+        box-shadow: 4px 3px 10px rgba(1,1,1,0.4);
+    }
 `
