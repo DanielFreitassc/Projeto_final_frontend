@@ -46,7 +46,6 @@ export const UsersList = () => {
                         {users.map(({ id, name, login, role, sector }) => (
                             <TableContent
                                 key={id}
-                                linkTo={`/produtos/${id}`}
                                 colsBody={[
                                     { cell: id },
                                     { cell: name },
